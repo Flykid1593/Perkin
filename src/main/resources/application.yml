@@ -1,0 +1,23 @@
+server:
+  port: 8806
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://120.26.186.65:3306/eesy?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#  rabbitmq:
+#    host: 127.0.0.1
+#    port: 5672
+#    username: root
+#    password: root
+mybatis:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.beidou.tree.entity
+fem:
+  file:
+    accessKey: sg_KVqO-Uf2eqdPc41I1ksM7ukWv4LhpxnaETqnY
+    secretKey: 4HJ_e5wI7tR9ht8Z6yFyDWxGo7zV3BqY5J1d5jvD
+    bucket: dj-img-store
+    domainOfBucket: http://filedj.ihelpedu.cn
