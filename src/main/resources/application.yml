@@ -3,7 +3,7 @@ server:
 spring:
   datasource:
     username: root
-    password: 123456
+    password:
     url: jdbc:mysql://120.26.186.65:3306/eesy?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
     driver-class-name: com.mysql.cj.jdbc.Driver
 #  data:
@@ -22,7 +22,7 @@ mybatis:
   typeAliasesPackage: com.beidou.tree.entity
 fem:
   file:
-    accessKey: sg_KVqO-Uf2eqdPc41I1ksM7ukWv4LhpxnaETqnY
-    secretKey: 4HJ_e5wI7tR9ht8Z6yFyDWxGo7zV3BqY5J1d5jvD
-    bucket: dj-img-store
-    domainOfBucket: http://filedj.ihelpedu.cn
+    accessKey:
+    secretKey:
+    bucket:
+    domainOfBucket:
