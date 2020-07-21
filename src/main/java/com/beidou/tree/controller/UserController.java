@@ -5,6 +5,7 @@ import com.beidou.tree.entity.User;
 import com.beidou.tree.service.UserService;
 import com.beidou.tree.service.UserServiceImpl;
 import com.beidou.tree.util.*;
+import lombok.AllArgsConstructor;
 import org.apache.commons.fileupload.FileItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,7 +16,6 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import java.util.List;
 import java.util.Map;
-
 /**
  * @author Perkin
  * @version 1.0
@@ -23,9 +23,12 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/api")
+
 public class UserController {
     @Autowired
     private UserService userService;
+
+
     /**
      * 七牛云 公钥
      */
@@ -47,6 +50,7 @@ public class UserController {
     @Value("${fem.file.domainOfBucket}")
     String domainOfBucket;
 
+
     @GetMapping("/all")
     public List<User> selectAll(){
         return userService.selectAll();
@@ -60,7 +64,8 @@ public class UserController {
         return users;
     }
     @GetMapping("/qrCode")
-    public Map qrCode(String uri) throws Exception {
+    public Map qrCode() throws Exception {
+        String uri = "我不管，我是你爹";
         // 嵌入二维码的图片路径
         String imgPath = "D:/ZJP.jpg";
         // 生成的二维码的路径及名称

@@ -7,4 +7,5 @@ import java.util.List;
 public interface UserService {
     List<User> selectAll();
     User selectByName(String userName);
+    String getToken(User user);
 }

@@ -12,7 +12,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.OutputStream;
 import java.util.Hashtable;
-
+import com.google.zxing.Result;
 /**
  * @author Perkin
  * @version 1.0

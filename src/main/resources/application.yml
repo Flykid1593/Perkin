@@ -6,6 +6,11 @@ spring:
     password: 123456
     url: jdbc:mysql://120.26.186.65:3306/eesy?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
     driver-class-name: com.mysql.cj.jdbc.Driver
+#  data:
+#    mongodb:
+#      database: test
+#      host: 120.26.186.65
+#      port: 27017
 #  rabbitmq:
 #    host: 127.0.0.1
 #    port: 5672

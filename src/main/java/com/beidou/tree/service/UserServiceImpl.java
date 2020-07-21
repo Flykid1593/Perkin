@@ -1,5 +1,7 @@
 package com.beidou.tree.service;
 
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.algorithms.Algorithm;
 import com.beidou.tree.entity.User;
 import com.beidou.tree.mapper.UserMapper;
 import lombok.AllArgsConstructor;
@@ -26,6 +28,11 @@ public class UserServiceImpl implements UserService{
     public User selectByName(String userName) {
         return userMapper.selectByName(userName);
     }
-
+    public String getToken(User user) {
+        String token="";
+        token= JWT.create().withAudience(user.getName())
+                .sign(Algorithm.HMAC256(user.getPassword()));
+        return token;
+    }
 
 }
